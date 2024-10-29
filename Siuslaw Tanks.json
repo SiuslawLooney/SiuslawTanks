@@ -1266,24 +1266,8 @@
           "persistentUuid": "f3f6bc11-4eb4-4ed6-9948-156012fb93e1",
           "width": 1302,
           "x": 10,
-          "y": 682,
+          "y": 672,
           "zOrder": 12,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 0,
-          "height": 63,
-          "layer": "",
-          "name": "Tank",
-          "persistentUuid": "a0eda376-e73a-467c-b8ea-b1a9c975f9ff",
-          "width": 90,
-          "x": 230,
-          "y": 457,
-          "zOrder": 10,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -1345,21 +1329,6 @@
           "x": 6464,
           "y": 768,
           "zOrder": 12,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "name": "Arrow",
-          "persistentUuid": "ee48d249-2f7d-4634-ade6-69acaeb2aaeb",
-          "width": 0,
-          "x": 418,
-          "y": 322,
-          "zOrder": 15,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -1687,8 +1656,8 @@
           "name": "Poison",
           "persistentUuid": "56b3320a-7ba2-40a8-8785-55e8133c07c3",
           "width": 64,
-          "x": 768,
-          "y": 512,
+          "x": 704,
+          "y": 576,
           "zOrder": 20,
           "numberProperties": [],
           "stringProperties": [],
@@ -1703,7 +1672,7 @@
           "persistentUuid": "9d041a62-de41-47b5-9f6c-5a3f63015788",
           "width": 64,
           "x": 1024,
-          "y": 512,
+          "y": 576,
           "zOrder": 20,
           "numberProperties": [],
           "stringProperties": [],
@@ -2019,15 +1988,16 @@
         },
         {
           "angle": 0,
-          "customSize": false,
-          "height": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 64,
           "keepRatio": true,
           "layer": "",
           "name": "DesertTank4",
           "persistentUuid": "8899a3ea-0180-4fe4-9435-70e9e34bdd27",
-          "width": 0,
-          "x": 384,
-          "y": 512,
+          "width": 86,
+          "x": 170,
+          "y": 544,
           "zOrder": 25,
           "numberProperties": [],
           "stringProperties": [],
@@ -4413,7 +4383,137 @@
           "updateIfNotVisible": false,
           "variables": [],
           "effects": [],
-          "behaviors": [],
+          "behaviors": [
+            {
+              "name": "FireBullet",
+              "type": "FireBullet::FireBullet",
+              "FireCooldown": 0.5,
+              "HasJustFired": false,
+              "FiringArc": 45,
+              "BulletQuantity": 1,
+              "AngleVariance": 0,
+              "RotateBullet": true,
+              "AmmoQuantity": 0,
+              "ShotsPerReload": 0,
+              "ReloadDuration": 1,
+              "MaxAmmo": 0,
+              "ShotsBeforeNextReload": 0,
+              "TotalShotsFired": 0,
+              "TotalBulletsCreated": 0,
+              "StartingAmmo": 0,
+              "TotalReloadsCompleted": 0,
+              "UnlimitedAmmo": true,
+              "ReloadInProgress": false,
+              "HeatIncreasePerShot": 0,
+              "HeatLevel": 0,
+              "AutomaticReloading": true,
+              "OverheatDuration": 0,
+              "LinearCoolingRate": 0.1,
+              "ExponentialCoolingRate": 0.3,
+              "BulletLayer": "",
+              "RandomizedAngle": 0,
+              "BulletSpeedVariance": 0
+            },
+            {
+              "name": "PlatformerMultitouchMapper",
+              "type": "SpriteMultitouchJoystick::PlatformerMultitouchMapper",
+              "Property": "PlatformerObject",
+              "ControllerIdentifier": 1,
+              "JoystickIdentifier": "Primary",
+              "JumpButton": "A"
+            },
+            {
+              "name": "PlatformerObject",
+              "type": "PlatformBehavior::PlatformerObjectBehavior",
+              "jumpSustainTime": 0.3,
+              "canGrabPlatforms": false,
+              "jumpSpeed": 650,
+              "maxFallingSpeed": 700,
+              "maxSpeed": 325,
+              "acceleration": 1500,
+              "canGoDownFromJumpthru": true,
+              "canGrabWithoutMoving": true,
+              "deceleration": 1500,
+              "gravity": 1000,
+              "ignoreDefaultControls": false,
+              "ladderClimbingSpeed": 150,
+              "slopeMaxAngle": 60,
+              "useLegacyTrajectory": false,
+              "xGrabTolerance": 10,
+              "yGrabOffset": 0
+            },
+            {
+              "name": "SmoothCamera",
+              "type": "SmoothCamera::SmoothCamera",
+              "LeftwardSpeed": 0.9,
+              "RightwardSpeed": 0.9,
+              "UpwardSpeed": 0.9,
+              "DownwardSpeed": 0.9,
+              "FollowOnX": true,
+              "FollowOnY": true,
+              "FollowFreeAreaLeft": 0,
+              "FollowFreeAreaRight": 0,
+              "FollowFreeAreaTop": 0,
+              "FollowFreeAreaBottom": 0,
+              "CameraOffsetX": 0,
+              "CameraOffsetY": -32,
+              "CameraDelay": 0,
+              "ForecastTime": 0,
+              "ForecastHistoryDuration": 0,
+              "LogLeftwardSpeed": 0,
+              "LogRightwardSpeed": 0,
+              "LogDownwardSpeed": 0,
+              "LogUpwardSpeed": 0,
+              "DelayedCenterX": 0,
+              "DelayedCenterY": 0,
+              "ForecastHistoryMeanX": 0,
+              "ForecastHistoryMeanY": 0,
+              "ForecastHistoryVarianceX": 0,
+              "ForecastHistoryCovariance": 0,
+              "ForecastHistoryLinearA": 0,
+              "ForecastHistoryLinearB": 0,
+              "ForecastedX": 0,
+              "ForecastedY": 0,
+              "ProjectedNewestX": 0,
+              "ProjectedNewestY": 0,
+              "ProjectedOldestX": 0,
+              "ProjectedOldestY": 0,
+              "ForecastHistoryVarianceY": 0,
+              "Index": 0,
+              "CameraDelayCatchUpSpeed": 0,
+              "CameraExtraDelay": 0,
+              "WaitingSpeedXMax": 0,
+              "WaitingSpeedYMax": 0,
+              "WaitingEnd": 0,
+              "CameraDelayCatchUpDuration": 0,
+              "LeftwardSpeedMax": 9000,
+              "RightwardSpeedMax": 9000,
+              "UpwardSpeedMax": 9000,
+              "DownwardSpeedMax": 9000,
+              "OldX": 9000,
+              "OldY": 9000,
+              "IsCalledManually": false
+            },
+            {
+              "name": "SmoothPlatformerCamera",
+              "type": "SmoothCamera::SmoothPlatformerCamera",
+              "PlatformerCharacter": "PlatformerObject",
+              "SmoothCamera": "SmoothCamera",
+              "JumpOriginY": 1.758268736427497e-308,
+              "AirFollowFreeAreaTop": 0,
+              "AirFollowFreeAreaBottom": 0,
+              "FloorFollowFreeAreaTop": 0,
+              "FloorFollowFreeAreaBottom": 0,
+              "AirUpwardSpeed": 0.95,
+              "AirDownwardSpeed": 0.95,
+              "FloorUpwardSpeed": 0.9,
+              "FloorDownwardSpeed": 0.9,
+              "AirUpwardSpeedMax": 9000,
+              "AirDownwardSpeedMax": 9000,
+              "FloorUpwardSpeedMax": 9000,
+              "FloorDownwardSpeedMax": 9000
+            }
+          ],
           "animations": [
             {
               "name": "",
@@ -4455,66 +4555,6 @@
                           {
                             "x": 0,
                             "y": 117
-                          }
-                        ]
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "adaptCollisionMaskAutomatically": true,
-          "assetStoreId": "02b5cde773d39909b22d1317cd0f889f50138111453b4ba663823cef57820231",
-          "name": "DesertTank1",
-          "type": "Sprite",
-          "updateIfNotVisible": false,
-          "variables": [],
-          "effects": [],
-          "behaviors": [],
-          "animations": [
-            {
-              "name": "",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": true,
-                  "timeBetweenFrames": 0.025,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": true,
-                      "image": "Desert tank 1.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": [
-                        [
-                          {
-                            "x": 0,
-                            "y": 0
-                          },
-                          {
-                            "x": 171,
-                            "y": 0
-                          },
-                          {
-                            "x": 171,
-                            "y": 136
-                          },
-                          {
-                            "x": 0,
-                            "y": 136
                           }
                         ]
                       ]
@@ -4623,1182 +4663,6 @@
                           {
                             "x": 0,
                             "y": 32
-                          }
-                        ]
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "adaptCollisionMaskAutomatically": true,
-          "assetStoreId": "4855940683061b87bf8fa392b943e691335d5f14b502d1c209aff80000f3a450",
-          "name": "DesertTank5",
-          "type": "Sprite",
-          "updateIfNotVisible": false,
-          "variables": [],
-          "effects": [],
-          "behaviors": [],
-          "animations": [
-            {
-              "name": "",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": true,
-                  "timeBetweenFrames": 0.025,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": true,
-                      "image": "Desert tank 5.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": [
-                        [
-                          {
-                            "x": 0,
-                            "y": 0
-                          },
-                          {
-                            "x": 163,
-                            "y": 0
-                          },
-                          {
-                            "x": 163,
-                            "y": 134
-                          },
-                          {
-                            "x": 0,
-                            "y": 134
-                          }
-                        ]
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "adaptCollisionMaskAutomatically": true,
-          "assetStoreId": "49e3a7291ceac199ce101f55d401c55b76455a6f866ebec196a7e0b9bf5963f6",
-          "name": "DesertTank2",
-          "type": "Sprite",
-          "updateIfNotVisible": false,
-          "variables": [],
-          "effects": [],
-          "behaviors": [],
-          "animations": [
-            {
-              "name": "",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": true,
-                  "timeBetweenFrames": 0.025,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": true,
-                      "image": "Desert tank 2.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": [
-                        [
-                          {
-                            "x": 0,
-                            "y": 0
-                          },
-                          {
-                            "x": 162,
-                            "y": 0
-                          },
-                          {
-                            "x": 162,
-                            "y": 119
-                          },
-                          {
-                            "x": 0,
-                            "y": 119
-                          }
-                        ]
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "adaptCollisionMaskAutomatically": true,
-          "assetStoreId": "e206b3da05fc8c16fa01b7d621f25ce0b0824fea76f47b31969901d93e932749",
-          "name": "DesertTank3",
-          "type": "Sprite",
-          "updateIfNotVisible": false,
-          "variables": [],
-          "effects": [],
-          "behaviors": [],
-          "animations": [
-            {
-              "name": "",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": true,
-                  "timeBetweenFrames": 0.025,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": true,
-                      "image": "Desert tank 3.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": [
-                        [
-                          {
-                            "x": 0,
-                            "y": 0
-                          },
-                          {
-                            "x": 184,
-                            "y": 0
-                          },
-                          {
-                            "x": 184,
-                            "y": 137
-                          },
-                          {
-                            "x": 0,
-                            "y": 137
-                          }
-                        ]
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "adaptCollisionMaskAutomatically": true,
-          "assetStoreId": "25d7f9f0d0adf005f39870d11dbbfdb3fea739891c33d8473c18c5d99414fd1c",
-          "name": "GreenTank2",
-          "type": "Sprite",
-          "updateIfNotVisible": false,
-          "variables": [],
-          "effects": [],
-          "behaviors": [],
-          "animations": [
-            {
-              "name": "",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": true,
-                  "timeBetweenFrames": 0.025,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": true,
-                      "image": "Green tank 2.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": [
-                        [
-                          {
-                            "x": 0,
-                            "y": 0
-                          },
-                          {
-                            "x": 162,
-                            "y": 0
-                          },
-                          {
-                            "x": 162,
-                            "y": 119
-                          },
-                          {
-                            "x": 0,
-                            "y": 119
-                          }
-                        ]
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "adaptCollisionMaskAutomatically": true,
-          "assetStoreId": "caf61d63352dc01a46595108b948f63b2cd63a3de77d181d727230e6ee9fb398",
-          "name": "GreenTank1",
-          "type": "Sprite",
-          "updateIfNotVisible": false,
-          "variables": [],
-          "effects": [],
-          "behaviors": [],
-          "animations": [
-            {
-              "name": "",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": true,
-                  "timeBetweenFrames": 0.025,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": true,
-                      "image": "Green tank 1.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": [
-                        [
-                          {
-                            "x": 0,
-                            "y": 0
-                          },
-                          {
-                            "x": 171,
-                            "y": 0
-                          },
-                          {
-                            "x": 171,
-                            "y": 136
-                          },
-                          {
-                            "x": 0,
-                            "y": 136
-                          }
-                        ]
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "adaptCollisionMaskAutomatically": true,
-          "assetStoreId": "e6cdaf0854f0cb081f0de9dcbe092001f6f30ec2fe0c746d7dae034875971164",
-          "name": "GreenTank4",
-          "type": "Sprite",
-          "updateIfNotVisible": false,
-          "variables": [],
-          "effects": [],
-          "behaviors": [],
-          "animations": [
-            {
-              "name": "",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": true,
-                  "timeBetweenFrames": 0.025,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": true,
-                      "image": "Green tank 4.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": [
-                        [
-                          {
-                            "x": 0,
-                            "y": 0
-                          },
-                          {
-                            "x": 150,
-                            "y": 0
-                          },
-                          {
-                            "x": 150,
-                            "y": 117
-                          },
-                          {
-                            "x": 0,
-                            "y": 117
-                          }
-                        ]
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "adaptCollisionMaskAutomatically": true,
-          "assetStoreId": "90bda1c92f35d9bb85457e4cfb1c1793c1491a7884a74e2da6444a64df8827ee",
-          "name": "GreenTank5",
-          "type": "Sprite",
-          "updateIfNotVisible": false,
-          "variables": [],
-          "effects": [],
-          "behaviors": [],
-          "animations": [
-            {
-              "name": "",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": true,
-                  "timeBetweenFrames": 0.025,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": true,
-                      "image": "Green tank 5.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": [
-                        [
-                          {
-                            "x": 0,
-                            "y": 0
-                          },
-                          {
-                            "x": 163,
-                            "y": 0
-                          },
-                          {
-                            "x": 163,
-                            "y": 134
-                          },
-                          {
-                            "x": 0,
-                            "y": 134
-                          }
-                        ]
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "adaptCollisionMaskAutomatically": true,
-          "assetStoreId": "319330bfc0b6e4922e40d295a24236290886d11cca33df3bb5b26c0068c96aeb",
-          "name": "GreyTank1",
-          "type": "Sprite",
-          "updateIfNotVisible": false,
-          "variables": [],
-          "effects": [],
-          "behaviors": [],
-          "animations": [
-            {
-              "name": "",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": true,
-                  "timeBetweenFrames": 0.025,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": true,
-                      "image": "Grey tank 1.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": [
-                        [
-                          {
-                            "x": 0,
-                            "y": 0
-                          },
-                          {
-                            "x": 171,
-                            "y": 0
-                          },
-                          {
-                            "x": 171,
-                            "y": 136
-                          },
-                          {
-                            "x": 0,
-                            "y": 136
-                          }
-                        ]
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "adaptCollisionMaskAutomatically": true,
-          "assetStoreId": "a56c4e024618314999938409913fd0f1cdc5b6c674090dfbefad33d6c15a6855",
-          "name": "GreyTank3",
-          "type": "Sprite",
-          "updateIfNotVisible": false,
-          "variables": [],
-          "effects": [],
-          "behaviors": [],
-          "animations": [
-            {
-              "name": "",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": true,
-                  "timeBetweenFrames": 0.025,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": true,
-                      "image": "Grey tank 3.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": [
-                        [
-                          {
-                            "x": 0,
-                            "y": 0
-                          },
-                          {
-                            "x": 184,
-                            "y": 0
-                          },
-                          {
-                            "x": 184,
-                            "y": 137
-                          },
-                          {
-                            "x": 0,
-                            "y": 137
-                          }
-                        ]
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "adaptCollisionMaskAutomatically": true,
-          "assetStoreId": "18c1c10713230365a5a4801874589e5b61382880c8082c20258bd4fa8ff97b1f",
-          "name": "GreyTank2",
-          "type": "Sprite",
-          "updateIfNotVisible": false,
-          "variables": [],
-          "effects": [],
-          "behaviors": [],
-          "animations": [
-            {
-              "name": "",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": true,
-                  "timeBetweenFrames": 0.025,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": true,
-                      "image": "Grey tank 2.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": [
-                        [
-                          {
-                            "x": 0,
-                            "y": 0
-                          },
-                          {
-                            "x": 162,
-                            "y": 0
-                          },
-                          {
-                            "x": 162,
-                            "y": 119
-                          },
-                          {
-                            "x": 0,
-                            "y": 119
-                          }
-                        ]
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "adaptCollisionMaskAutomatically": true,
-          "assetStoreId": "d3e50bc43bd5cea28023e9724e53cd6ca4d5f13deca90a2a96c86c093824428e",
-          "name": "GreyTank4",
-          "type": "Sprite",
-          "updateIfNotVisible": false,
-          "variables": [],
-          "effects": [],
-          "behaviors": [],
-          "animations": [
-            {
-              "name": "",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": true,
-                  "timeBetweenFrames": 0.025,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": true,
-                      "image": "Grey tank 4.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": [
-                        [
-                          {
-                            "x": 0,
-                            "y": 0
-                          },
-                          {
-                            "x": 150,
-                            "y": 0
-                          },
-                          {
-                            "x": 150,
-                            "y": 117
-                          },
-                          {
-                            "x": 0,
-                            "y": 117
-                          }
-                        ]
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "adaptCollisionMaskAutomatically": true,
-          "assetStoreId": "d17f34704a198e813ed99df3ab1df0a1ecf9c8b21df0937afa0bddec043a7980",
-          "name": "GreyTank5",
-          "type": "Sprite",
-          "updateIfNotVisible": false,
-          "variables": [],
-          "effects": [],
-          "behaviors": [],
-          "animations": [
-            {
-              "name": "",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": true,
-                  "timeBetweenFrames": 0.025,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": true,
-                      "image": "Grey tank 5.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": [
-                        [
-                          {
-                            "x": 0,
-                            "y": 0
-                          },
-                          {
-                            "x": 163,
-                            "y": 0
-                          },
-                          {
-                            "x": 163,
-                            "y": 134
-                          },
-                          {
-                            "x": 0,
-                            "y": 134
-                          }
-                        ]
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "adaptCollisionMaskAutomatically": true,
-          "assetStoreId": "4cfc130bd046e5aa5dcf699f0cedeca6d6ad0174fd08e01a055ea665fb073096",
-          "name": "AmmoCrate",
-          "type": "Sprite",
-          "updateIfNotVisible": false,
-          "variables": [],
-          "effects": [],
-          "behaviors": [],
-          "animations": [
-            {
-              "name": "",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": true,
-                  "timeBetweenFrames": 0.025,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": true,
-                      "image": "Ammo crate.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": [
-                        [
-                          {
-                            "x": 0,
-                            "y": 0
-                          },
-                          {
-                            "x": 100,
-                            "y": 0
-                          },
-                          {
-                            "x": 100,
-                            "y": 100
-                          },
-                          {
-                            "x": 0,
-                            "y": 100
-                          }
-                        ]
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "adaptCollisionMaskAutomatically": true,
-          "assetStoreId": "eeee2df5cb66d94c4bde53c4d4c2e6a75abf335dd4c237a0d0fb9195ac0809f0",
-          "name": "ArmorCrate",
-          "type": "Sprite",
-          "updateIfNotVisible": false,
-          "variables": [],
-          "effects": [],
-          "behaviors": [],
-          "animations": [
-            {
-              "name": "",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": true,
-                  "timeBetweenFrames": 0.025,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": true,
-                      "image": "Armor crate.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": [
-                        [
-                          {
-                            "x": 0,
-                            "y": 0
-                          },
-                          {
-                            "x": 100,
-                            "y": 0
-                          },
-                          {
-                            "x": 100,
-                            "y": 100
-                          },
-                          {
-                            "x": 0,
-                            "y": 100
-                          }
-                        ]
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "adaptCollisionMaskAutomatically": true,
-          "assetStoreId": "2529cd187d8c5f4f1f2ad56fa7375e5e3b8e32f750f414fc7a10cd7c9461a21e",
-          "name": "GreenBarrel",
-          "type": "Sprite",
-          "updateIfNotVisible": false,
-          "variables": [],
-          "effects": [],
-          "behaviors": [],
-          "animations": [
-            {
-              "name": "",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": true,
-                  "timeBetweenFrames": 0.025,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": true,
-                      "image": "Green barrel.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": [
-                        [
-                          {
-                            "x": 0,
-                            "y": 0
-                          },
-                          {
-                            "x": 80,
-                            "y": 0
-                          },
-                          {
-                            "x": 80,
-                            "y": 99
-                          },
-                          {
-                            "x": 0,
-                            "y": 99
-                          }
-                        ]
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "adaptCollisionMaskAutomatically": true,
-          "assetStoreId": "197d94b8e3638ec21211c24061bf4e4553b5099b065bf61339bfe092f9595d37",
-          "name": "FullArrow",
-          "type": "Sprite",
-          "updateIfNotVisible": false,
-          "variables": [],
-          "effects": [],
-          "behaviors": [],
-          "animations": [
-            {
-              "name": "",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": true,
-                  "timeBetweenFrames": 0.025,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": true,
-                      "image": "Full Arrow.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": [
-                        [
-                          {
-                            "x": 0,
-                            "y": 0
-                          },
-                          {
-                            "x": 180,
-                            "y": 0
-                          },
-                          {
-                            "x": 180,
-                            "y": 96
-                          },
-                          {
-                            "x": 0,
-                            "y": 96
-                          }
-                        ]
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "adaptCollisionMaskAutomatically": true,
-          "assetStoreId": "e082880db5a8553c79ae1ef9879c7d92d5b6344cf025712c1775ae4e7ba3241a",
-          "name": "GreyBarrel",
-          "type": "Sprite",
-          "updateIfNotVisible": false,
-          "variables": [],
-          "effects": [],
-          "behaviors": [],
-          "animations": [
-            {
-              "name": "",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": true,
-                  "timeBetweenFrames": 0.025,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": true,
-                      "image": "Grey barrel.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": [
-                        [
-                          {
-                            "x": 0,
-                            "y": 0
-                          },
-                          {
-                            "x": 80,
-                            "y": 0
-                          },
-                          {
-                            "x": 80,
-                            "y": 99
-                          },
-                          {
-                            "x": 0,
-                            "y": 99
-                          }
-                        ]
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "adaptCollisionMaskAutomatically": true,
-          "assetStoreId": "79f25e0fa17462ab160ea3428e77c2aa1b21a3b2ea8c181e0f92a82936b6e1af",
-          "name": "Mine",
-          "type": "Sprite",
-          "updateIfNotVisible": false,
-          "variables": [],
-          "effects": [],
-          "behaviors": [],
-          "animations": [
-            {
-              "name": "",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": true,
-                  "timeBetweenFrames": 0.025,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": true,
-                      "image": "Mine.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": [
-                        [
-                          {
-                            "x": 0,
-                            "y": 0
-                          },
-                          {
-                            "x": 72,
-                            "y": 0
-                          },
-                          {
-                            "x": 72,
-                            "y": 28
-                          },
-                          {
-                            "x": 0,
-                            "y": 28
-                          }
-                        ]
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "pressed",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": true,
-                  "timeBetweenFrames": 0.025,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": true,
-                      "image": "Mine_pressed.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": [
-                        [
-                          {
-                            "x": 0,
-                            "y": 0
-                          },
-                          {
-                            "x": 72,
-                            "y": 0
-                          },
-                          {
-                            "x": 72,
-                            "y": 28
-                          },
-                          {
-                            "x": 0,
-                            "y": 28
-                          }
-                        ]
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "on",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": true,
-                  "timeBetweenFrames": 0.025,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": true,
-                      "image": "Mine_on.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": [
-                        [
-                          {
-                            "x": 0,
-                            "y": 0
-                          },
-                          {
-                            "x": 72,
-                            "y": 0
-                          },
-                          {
-                            "x": 72,
-                            "y": 28
-                          },
-                          {
-                            "x": 0,
-                            "y": 28
                           }
                         ]
                       ]
@@ -5991,66 +4855,6 @@
         },
         {
           "adaptCollisionMaskAutomatically": true,
-          "assetStoreId": "b0726622366c7cadc22f5768039f13f811b4c450ee25fc7aeb33500756f8438a",
-          "name": "GreenTank3",
-          "type": "Sprite",
-          "updateIfNotVisible": false,
-          "variables": [],
-          "effects": [],
-          "behaviors": [],
-          "animations": [
-            {
-              "name": "",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": true,
-                  "timeBetweenFrames": 0.025,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": true,
-                      "image": "Green tank 3.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": [
-                        [
-                          {
-                            "x": 0,
-                            "y": 0
-                          },
-                          {
-                            "x": 184,
-                            "y": 0
-                          },
-                          {
-                            "x": 184,
-                            "y": 137
-                          },
-                          {
-                            "x": 0,
-                            "y": 137
-                          }
-                        ]
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "adaptCollisionMaskAutomatically": true,
           "assetStoreId": "ec99dfbbf4b00c05677c9d849aff485d53941612a33a5d9e1f066ce458359d81",
           "name": "EmptyArrow",
           "type": "Sprite",
@@ -6201,64 +5005,7 @@
             "objectName": "DesertTank4"
           },
           {
-            "objectName": "DesertTank1"
-          },
-          {
             "objectName": "TankBullet7"
-          },
-          {
-            "objectName": "DesertTank5"
-          },
-          {
-            "objectName": "DesertTank2"
-          },
-          {
-            "objectName": "DesertTank3"
-          },
-          {
-            "objectName": "GreenTank2"
-          },
-          {
-            "objectName": "GreenTank1"
-          },
-          {
-            "objectName": "GreenTank4"
-          },
-          {
-            "objectName": "GreenTank5"
-          },
-          {
-            "objectName": "GreyTank1"
-          },
-          {
-            "objectName": "GreyTank3"
-          },
-          {
-            "objectName": "GreyTank2"
-          },
-          {
-            "objectName": "GreyTank4"
-          },
-          {
-            "objectName": "GreyTank5"
-          },
-          {
-            "objectName": "AmmoCrate"
-          },
-          {
-            "objectName": "ArmorCrate"
-          },
-          {
-            "objectName": "GreenBarrel"
-          },
-          {
-            "objectName": "FullArrow"
-          },
-          {
-            "objectName": "GreyBarrel"
-          },
-          {
-            "objectName": "Mine"
           },
           {
             "objectName": "RedBarrel"
@@ -6268,9 +5015,6 @@
           },
           {
             "objectName": "WoodCrate"
-          },
-          {
-            "objectName": "GreenTank3"
           },
           {
             "objectName": "EmptyArrow"
@@ -6310,7 +5054,7 @@
               },
               "parameters": [
                 "",
-                "Tank",
+                "DesertTank4",
                 "",
                 "",
                 ""
@@ -6321,7 +5065,7 @@
                 "value": "ChangePlan"
               },
               "parameters": [
-                "Tank",
+                "DesertTank4",
                 "=",
                 "1000"
               ]
@@ -6535,7 +5279,7 @@
                         "value": "PosY"
                       },
                       "parameters": [
-                        "Tank",
+                        "DesertTank4",
                         ">",
                         "FallMarker.Y()"
                       ]
@@ -6545,7 +5289,7 @@
                         "value": "CollisionNP"
                       },
                       "parameters": [
-                        "Tank",
+                        "DesertTank4",
                         "Hazards",
                         "",
                         "",
@@ -6628,7 +5372,7 @@
                     "value": "CollisionNP"
                   },
                   "parameters": [
-                    "Tank",
+                    "DesertTank4",
                     "Checkpoint",
                     "",
                     "",
@@ -6777,7 +5521,7 @@
                         "value": "FlippedX"
                       },
                       "parameters": [
-                        "Tank"
+                        "DesertTank4"
                       ]
                     }
                   ],
@@ -6787,7 +5531,7 @@
                         "value": "FireBullet::FireBullet::Fire"
                       },
                       "parameters": [
-                        "Tank",
+                        "DesertTank4",
                         "FireBullet",
                         "Tank.CenterX()-75/2",
                         "Tank.CenterY()-75/2",
@@ -6818,7 +5562,7 @@
                         "value": "FlippedX"
                       },
                       "parameters": [
-                        "Tank"
+                        "DesertTank4"
                       ]
                     }
                   ],
@@ -6828,7 +5572,7 @@
                         "value": "FireBullet::FireBullet::Fire"
                       },
                       "parameters": [
-                        "Tank",
+                        "DesertTank4",
                         "FireBullet",
                         "Tank.CenterX()",
                         "Tank.CenterY()-75/2",
@@ -6858,7 +5602,7 @@
                         "value": "FireBullet::FireBullet::HasJustFired"
                       },
                       "parameters": [
-                        "Tank",
+                        "DesertTank4",
                         "FireBullet",
                         ""
                       ]
@@ -6899,7 +5643,7 @@
                     "value": "PlatformBehavior::PlatformerObjectBehavior::IsUsingControl"
                   },
                   "parameters": [
-                    "Tank",
+                    "DesertTank4",
                     "PlatformerObject",
                     "\"Left\""
                   ]
@@ -6917,7 +5661,7 @@
                     "value": "FlipX"
                   },
                   "parameters": [
-                    "Tank",
+                    "DesertTank4",
                     "yes"
                   ]
                 }
@@ -6931,7 +5675,7 @@
                     "value": "PlatformBehavior::PlatformerObjectBehavior::IsUsingControl"
                   },
                   "parameters": [
-                    "Tank",
+                    "DesertTank4",
                     "PlatformerObject",
                     "\"Right\""
                   ]
@@ -6949,7 +5693,7 @@
                     "value": "FlipX"
                   },
                   "parameters": [
-                    "Tank",
+                    "DesertTank4",
                     "no"
                   ]
                 }
@@ -6990,9 +5734,9 @@
                   "parameters": [
                     "",
                     "CameraBoundarysMarker_Left.BoundingBoxRight()",
-                    "Tank.Y()-500",
+                    "DesertTank4.Y()-500",
                     "CameraBoundarysMarker_Right.BoundingBoxLeft()",
-                    "Tank.Y()+500",
+                    "DesertTank4.Y()+500",
                     "",
                     ""
                   ]
@@ -7031,7 +5775,7 @@
                     "value": "Distance"
                   },
                   "parameters": [
-                    "Tank",
+                    "DesertTank4",
                     "Walkingenemy",
                     "700",
                     ""
@@ -7318,7 +6062,7 @@
                   },
                   "parameters": [
                     "Bullets",
-                    "Tank",
+                    "DesertTank4",
                     "1000",
                     ""
                   ]
@@ -7435,7 +6179,7 @@
           "isLocked": false,
           "name": "MobileControls",
           "renderingType": "",
-          "visibility": true,
+          "visibility": false,
           "cameras": [],
           "effects": []
         }
